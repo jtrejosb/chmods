@@ -7,13 +7,13 @@
  */
 package io.bitlab.api.launch;
 
-import io.bitlab.api.Core;
+import io.bitlab.api.model.AccessString;
 
 public class AppLauncher {
   public static void main(String[] args) {
-    Core core=new Core();
+    AccessString acc=new AccessString();
     for(int i=0;i<=777;i++) {
-      String output=core.getGrantString(String.valueOf(i));
+      String output=acc.getAccessString(String.valueOf(i));
       if(output!=null) {
         System.out.printf("chmod value: %s%npermissions: %s%n",i,output);
       } else {
