@@ -25,4 +25,22 @@ public class AccessString {
     }
     return input.length()==1&&str!=null?"------"+str:input.length()==2&&str!=null?"---"+str:str;
   }
+
+  public String getChmodValue(String[] array) {
+    String stringVal="";
+    for(int i=0;i<array.length;i++) {
+      int count=0;
+      for(int j=0;j<array[i].length();j++) {
+        if(array[i].charAt(j)=='r')
+          count+=4;
+        else if(array[i].charAt(j)=='w')
+          count+=2;
+        else if(array[i].charAt(j)=='x')
+          count++;
+      }
+      stringVal+=count;
+    }
+
+    return stringVal;
+  }
 }

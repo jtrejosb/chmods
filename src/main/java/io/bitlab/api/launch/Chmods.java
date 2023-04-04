@@ -7,11 +7,16 @@
  */
 package io.bitlab.api.launch;
 
-import io.bitlab.api.model.AccessString;
+import javax.swing.SwingUtilities;
+import javax.swing.UIManager;
 
-public class AppLauncher {
+import io.bitlab.api.controller.ApplicationController;
+import io.bitlab.api.model.AccessString;
+import io.bitlab.api.view.ApplicationView;
+
+public class Chmods {
   public static void main(String[] args) {
-    AccessString acc=new AccessString();
+    /*AccessString acc=new AccessString();
     for(int i=0;i<=777;i++) {
       String output=acc.getAccessString(String.valueOf(i));
       if(output!=null) {
@@ -19,6 +24,23 @@ public class AppLauncher {
       } else {
         System.out.printf("Invalid value '%s'%n",i);
       }
-    }
+    }*/
+    SwingUtilities.invokeLater(new Runnable() {
+      @Override
+      public void run() {
+        try {
+          if(System.getProperty("os.name").equals("Linux"))
+            UIManager.setLookAndFeel("com.sun.java.swing.plaf.gtk.GTKLookAndFeel");
+          else
+            UIManager.setLookAndFeel("javax.swing.plaf.nimbus.NimbusLookAndFeel");
+
+          ApplicationView apv=new ApplicationView();
+          AccessString acc=new AccessString();
+          new ApplicationController(apv,acc);
+        } catch(Exception e) {
+          e.printStackTrace();
+        }
+      }
+    });
   }
 }
