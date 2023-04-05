@@ -98,12 +98,4 @@ public class ApplicationView extends JFrame {
   public String getChmodValue() {
     return output;
   }
-
-  //TODO: this method should copy the permissons string (rwx--x--x) not the numeric value
-  /*private void copyToClip() {
-    java.awt.datatransfer.StringSelection sel=new java.awt.datatransfer.StringSelection(output);
-    java.awt.datatransfer.Clipboard clip=java.awt.Toolkit.getDefaultToolkit().getSystemClipboard();
-    clip.setContents(sel,sel);
-    System.out.println("Copied");
-  }*/
 }
