@@ -61,6 +61,7 @@ public class ApplicationView extends JFrame {
     cbg3=new CheckBoxGroup("Others Rights");
 
     btnCopy=new JButton("Copy");
+    btnCopy.setFocusPainted(false);
     btnCopy.setBounds(getWidth()/2-55/2,60,58,25);
 
     groupsPane.add(cbg1);
