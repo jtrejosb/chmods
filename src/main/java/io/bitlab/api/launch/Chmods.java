@@ -16,15 +16,6 @@ import io.bitlab.api.view.ApplicationView;
 
 public class Chmods {
   public static void main(String[] args) {
-    /*AccessString acc=new AccessString();
-    for(int i=0;i<=777;i++) {
-      String output=acc.getAccessString(String.valueOf(i));
-      if(output!=null) {
-        System.out.printf("chmod value: %s%npermissions: %s%n",i,output);
-      } else {
-        System.out.printf("Invalid value '%s'%n",i);
-      }
-    }*/
     SwingUtilities.invokeLater(new Runnable() {
       @Override
       public void run() {
