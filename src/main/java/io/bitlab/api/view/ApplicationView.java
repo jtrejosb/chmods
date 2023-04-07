@@ -32,7 +32,7 @@ public class ApplicationView extends JFrame {
 
   public ApplicationView() {
     super("chmod Calc");
-    setSize(470,320);
+    setSize(470,340);
     setResizable(false);
     setLocationRelativeTo(null);
     setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
@@ -61,6 +61,7 @@ public class ApplicationView extends JFrame {
     cbg3=new CheckBoxGroup("Others Rights");
 
     btnCopy=new JButton("Copy");
+    btnCopy.setFocusable(false);
     btnCopy.setBounds(getWidth()/2-55/2,60,58,25);
 
     groupsPane.add(cbg1);
