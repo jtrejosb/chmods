@@ -1,6 +1,6 @@
 /**
  * @author JohnnyTB (jtrejosb@live.com)
- * gitlab.com/iolinker | github.com/jtrejosb
+ * gitlab.com/rootpass | github.com/rootpasss
  *
  * Licenses GNU GPL v3.0 and Eclipse Public License 2.0
  * Date: 02/04/2023, Time: 18:42:52
